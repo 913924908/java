@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <form action="/untitled/LoginServlet" method="post">
+        用户名<input type="text" name="username"/>
+        密码<input type="password" name="pwd"/>
+        <img src="/untitled/YZMServlet" alt="" id="yzm">
+        <input type="text" name=""checkcode/>
+        <a href="#" onclick="handle()">看不清</a>
+        <input type="button" value="登陆"/>
+    </form>
+</body>
+<script>
+    count=0
+    function handle(){
+        var yzm = document.getElementById("yzm");
+        yzm.src="/untitled/YZMServlet?count="+count;
+        count=count+1
+    }
+</script>
+</html>
